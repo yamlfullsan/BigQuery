@@ -1,0 +1,8 @@
+--Fecha tipo TIMESTAMP
+ extract (date from campo_fecha ) as dia
+ 
+--Fecha tipo TIMESTAMP formato UTC
+ extract (date from campo_fecha AT TIME ZONE "America/Mexico_City") as dia
+ 
+-- Fecha tipo string 
+ extract(date from cast(campo_fecha as timestamp)) AS dia
